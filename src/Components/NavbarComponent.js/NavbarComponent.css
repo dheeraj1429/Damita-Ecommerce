@@ -1,0 +1,57 @@
+.Navbar__Container_Div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navbar_Logo_Div img {
+  width: 200px;
+}
+
+.User__Details_Div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.User__Phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.Navbar__Icons_Div {
+  display: flex;
+}
+
+.Navbar__Icons_Div i {
+  margin: 0 1.2rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--IconsColor);
+  transition: all 0.3s ease;
+}
+
+.Navbar__Icons_Div i:hover {
+  color: var(--NavbarBgColor);
+}
+
+.Basket_Div {
+  position: relative;
+}
+
+.Orders {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: -20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--NavbarBgColor);
+  color: var(--MainColor);
+  font-weight: 500;
+}
