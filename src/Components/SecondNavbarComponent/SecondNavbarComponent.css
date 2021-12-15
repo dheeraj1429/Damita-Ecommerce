@@ -1,0 +1,26 @@
+.Second__Navbar_Div {
+  width: 100%;
+  background-color: var(--NavbarBgColor);
+  padding: 0.6rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.Navbar__Links {
+  color: var(--MainColor);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+}
+
+.Navbar__Links p {
+  margin-right: 50px;
+  font-size: 0.9rem;
+}
+
+.Navbar__Links p span {
+  margin-left: 0.6rem;
+  font-size: 0.8rem;
+}

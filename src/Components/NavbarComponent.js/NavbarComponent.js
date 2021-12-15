@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import UserDetailsComponent from '../UserDetailsComponent/UserDetailsComponent';
 
@@ -8,12 +9,15 @@ function NavbarComponent() {
   const [Icons, setIcons] = useState([
     {
       ClassIcons: 'far fa-user',
+      urlPage: 'User',
     },
     {
       ClassIcons: 'far fa-heart',
+      urlPage: 'Like',
     },
     {
       ClassIcons: 'fas fa-shopping-bag basket',
+      urlPage: 'Store',
     },
   ]);
 
@@ -21,7 +25,9 @@ function NavbarComponent() {
     <div className="Navbar__Container_Div Container padding_One">
       {/* Logo */}
       <div className="Navbar_Logo_Div">
-        <img src="/Images/logo.png"></img>
+        <Link to="/">
+          <img src="/Images/logo.png"></img>
+        </Link>
       </div>
 
       <div className="User__Details_Div">
@@ -34,12 +40,16 @@ function NavbarComponent() {
           {/* Icons */}
           {Icons.map((el) =>
             el.ClassIcons == 'fas fa-shopping-bag basket' ? (
-              <div className="Basket_Div">
-                <div className="Orders">0</div>
-                <i className={el.ClassIcons}></i>
-              </div>
+              <Link to={el.urlPage}>
+                <div className="Basket_Div">
+                  <div className="Orders">0</div>
+                  <i className={el.ClassIcons}></i>
+                </div>
+              </Link>
             ) : (
-              <i className={el.ClassIcons}></i>
+              <Link to={el.urlPage}>
+                <i className={el.ClassIcons}></i>
+              </Link>
             )
           )}
         </div>

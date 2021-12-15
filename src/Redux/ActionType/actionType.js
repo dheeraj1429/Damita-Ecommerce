@@ -1,0 +1,3 @@
+export const ACTION_TYPE = {
+  SHOW_AND_HIDE_MEGA_MENU: 'SHOW_AND_HIDE_MEGA_MENU',
+};

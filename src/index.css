@@ -28,6 +28,7 @@ code {
   --MainColor: #fff;
   --Gray: rgb(98, 98, 98);
   --IconsColor: rgb(56, 56, 56);
+  --Lightgray: #e6e6e6;
 }
 
 /* glogbal Classes */
@@ -36,7 +37,7 @@ a {
 }
 
 .Container {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: auto;
 }
 
