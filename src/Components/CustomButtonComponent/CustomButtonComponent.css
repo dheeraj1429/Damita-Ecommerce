@@ -1,0 +1,8 @@
+.ShopButton {
+  padding: 0.8rem 1.2rem;
+  background: none;
+  color: var(--mainColor);
+  border: 1px solid var(--mainColor);
+  cursor: pointer;
+  margin-top: 2rem;
+}

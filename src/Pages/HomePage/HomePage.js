@@ -1,7 +1,10 @@
 import React from 'react';
 
 import BadgeComponent from '../../Components/BadgeComponent/BadgeComponent';
+import BannerCardsComponent from '../../Components/BannerCardsComponent/BannerCardsComponent';
+import ProductsCardComponent from '../../Components/ProductsCardComponent/productsCardComponent';
 import SidebarComponent from '../../Components/SidebarComponent/SidebarComponent';
+import SlideComponent from '../../Components/SlideComponent/SlideComponent';
 
 import './HomePage.css';
 
@@ -18,10 +21,14 @@ function HomePage() {
         {/* 2 slider banner */}
 
         {/* Slider Section */}
-        <div className="HomePage__Slider_Div">
-          <img src="/Images/slider-one.png" />
-        </div>
+        <SlideComponent />
       </div>
+
+      {/* Banner Cards Section */}
+      <BannerCardsComponent />
+
+      {/* Products Cards */}
+      <ProductsCardComponent />
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.Banner_Cards_Div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Banner_Cards_Div .Cards_Inner_Div {
+  width: 470px;
+  height: 270px;
+  margin: 0 0.5rem;
+  overflow: hidden;
+}
+
+.Banner_Cards_Div .Cards_Inner_Div img:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}

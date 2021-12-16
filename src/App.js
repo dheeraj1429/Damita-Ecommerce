@@ -8,6 +8,7 @@ import HomePage from './Pages/HomePage/HomePage';
 // Components
 import NavbarComponent from './Components/NavbarComponent.js/NavbarComponent';
 import SecondNavbarComponent from './Components/SecondNavbarComponent/SecondNavbarComponent';
+import ProductsSinglePage from './Pages/ProductsSinglepage/ProductsSinglePage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       {/* Routes */}
       <Routes>
         <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/Ecommerce/Products:Name" element={<ProductsSinglePage />} />
       </Routes>
 
       {/* Footer */}
