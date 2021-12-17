@@ -50,7 +50,7 @@ function ProductsCardComponent() {
                     key={el.id}
                     className={item.icon}
                     onClick={() => {
-                      if (item.icon == 'far fa-heart') {
+                      if (item.icon == 'fas fa-shopping-bag') {
                         dispatch(wishListProducts(el));
                       }
                     }}
