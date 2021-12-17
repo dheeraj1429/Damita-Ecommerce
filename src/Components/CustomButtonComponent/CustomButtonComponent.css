@@ -1,8 +1,19 @@
-.ShopButton {
+.EcoButtonXqe {
   padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.ShopButton {
   background: none;
   color: var(--mainColor);
   border: 1px solid var(--mainColor);
-  cursor: pointer;
-  margin-top: 2rem;
+}
+
+.View-Cart-Button {
+  background-color: var(--NavbarBgColor);
+  color: var(--mainColor);
+  width: 50%;
+  border: none;
+  margin-right: 1rem;
 }

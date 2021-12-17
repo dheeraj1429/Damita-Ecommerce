@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { fetchData, wishListProducts } from '../../Redux/Action/action';
+import { fetchData, wishListProducts, closeModelWindow, selectedProduct } from '../../Redux/Action/action';
+import AddToCardPopupComponent from '../AddToCardPopupComponent/AddToCardPopupComponent';
 
 import './productsCardComponent.css';
 
@@ -22,6 +23,8 @@ function ProductsCardComponent() {
 
   return (
     <div className="Products_Cards__Container Container padding_One">
+      <AddToCardPopupComponent />
+
       {selector.Products !== null
         ? selector.Products.slice(0, 4).map((el) => (
             <div className="Products_Card_Inner" key={el.id}>
@@ -52,6 +55,8 @@ function ProductsCardComponent() {
                     onClick={() => {
                       if (item.icon == 'fas fa-shopping-bag') {
                         dispatch(wishListProducts(el));
+                        dispatch(closeModelWindow(true));
+                        dispatch(selectedProduct(el));
                       }
                     }}
                   ></i>

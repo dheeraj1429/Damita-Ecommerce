@@ -1,0 +1,65 @@
+.AddTOCard_OverLay_Div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.719);
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  z-index: 200;
+}
+
+.AddToCard_PopUp_Component_Active {
+  visibility: visible;
+}
+
+.AddToCard_Flex_Div {
+  display: flex;
+}
+
+.AddToCard_PopUp_Div {
+  width: 40%;
+  background-color: var(--mainColor);
+  border-radius: 5px;
+  padding: 2rem;
+  position: relative;
+}
+
+.AddToCard_PopUp_Div_Buttons a {
+  width: 50%;
+  margin: 0 1rem;
+}
+
+.AddToCard_PopUp_Div_Buttons a button {
+  width: 100%;
+}
+
+.AddToCar_Close_Button {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.Products_Container_div h1 {
+  font-size: 30px;
+}
+
+.Products_Img_div {
+  width: 250px;
+  margin-right: 1rem;
+}
+
+.Products_Img_div img {
+  width: 100%;
+  height: auto;
+}
+
+.AddToCard_PopUp_Div_Buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

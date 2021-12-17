@@ -44,12 +44,10 @@ function NavbarComponent() {
           {/* Icons */}
           {Icons.map((el) =>
             el.ClassIcons == 'fas fa-shopping-bag basket' ? (
-              <Link to={el.urlPage}>
-                <div className="Basket_Div">
-                  <div className="Orders">{selector.length}</div>
-                  <i className={el.ClassIcons}></i>
-                </div>
-              </Link>
+              <div className="Basket_Div">
+                <div className="Orders">{selector.length}</div>
+                <i className={el.ClassIcons}></i>
+              </div>
             ) : (
               <Link to={el.urlPage}>
                 <i className={el.ClassIcons}></i>

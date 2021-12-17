@@ -25,3 +25,17 @@ export const wishListProducts = function (data) {
     payload: data,
   };
 };
+
+export const closeModelWindow = function (data) {
+  return {
+    type: ACTION_TYPE.CLOSE_MODEL_WINDOW,
+    payload: data,
+  };
+};
+
+export const selectedProduct = function (data) {
+  return {
+    type: ACTION_TYPE.SELECTED_PRODUCTS,
+    payload: data,
+  };
+};
