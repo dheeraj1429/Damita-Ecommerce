@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 
 import UserDetailsComponent from '../UserDetailsComponent/UserDetailsComponent';
 
+import { useSelector } from 'react-redux';
+
 import './NavbarComponent.css';
 
 function NavbarComponent() {
+  const selector = useSelector((state) => state.userStoreData.WishListProductsData);
+
   const [Icons, setIcons] = useState([
     {
       ClassIcons: 'far fa-user',
@@ -42,7 +46,7 @@ function NavbarComponent() {
             el.ClassIcons == 'fas fa-shopping-bag basket' ? (
               <Link to={el.urlPage}>
                 <div className="Basket_Div">
-                  <div className="Orders">0</div>
+                  <div className="Orders">{selector.length}</div>
                   <i className={el.ClassIcons}></i>
                 </div>
               </Link>

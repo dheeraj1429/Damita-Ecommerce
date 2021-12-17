@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { fetchData, LikeProducts } from '../../Redux/Action/action';
+import { fetchData, wishListProducts } from '../../Redux/Action/action';
 
 import './productsCardComponent.css';
 
@@ -13,7 +13,7 @@ function ProductsCardComponent() {
     { icon: 'far fa-heart', id: 2 },
     { icon: 'fas fa-shopping-bag', id: 3 },
   ]);
-  const selector = useSelector((state) => state.userStoreData.Products);
+  const selector = useSelector((state) => state.userStoreData);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,8 +22,8 @@ function ProductsCardComponent() {
 
   return (
     <div className="Products_Cards__Container Container padding_One">
-      {selector !== null
-        ? selector.slice(0, 4).map((el) => (
+      {selector.Products !== null
+        ? selector.Products.slice(0, 4).map((el) => (
             <div className="Products_Card_Inner" key={el.id}>
               <div className="New_Products">
                 <p>-{Math.trunc((el.Deal_of_the_Day / el.ragulerPrice) * 100)}%</p>
@@ -47,11 +47,11 @@ function ProductsCardComponent() {
               <div className="Products_Icons_div">
                 {IconsData.map((item) => (
                   <i
-                    key={item.id}
+                    key={el.id}
                     className={item.icon}
                     onClick={() => {
                       if (item.icon == 'far fa-heart') {
-                        dispatch(LikeProducts(el));
+                        dispatch(wishListProducts(el));
                       }
                     }}
                   ></i>

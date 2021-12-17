@@ -19,9 +19,9 @@ export const fetchData = function () {
   };
 };
 
-export const LikeProducts = function (data) {
+export const wishListProducts = function (data) {
   return {
-    type: ACTION_TYPE.LIKE_PRODUCTS,
+    type: ACTION_TYPE.WISH_LIST_PRODUCTS,
     payload: data,
   };
 };

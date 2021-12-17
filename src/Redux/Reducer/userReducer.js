@@ -3,7 +3,7 @@ import { ACTION_TYPE } from '../ActionType/actionType';
 const initalState = {
   ShowMegaMenu: false,
   Products: null,
-  LikeProductsData: [],
+  WishListProductsData: [],
 };
 
 const combineSelectedProducts = function (cardItem, addToCardItem) {
@@ -32,10 +32,10 @@ const userReducer = function (state = initalState, action) {
         Products: [...action.payload],
       };
 
-    case ACTION_TYPE.LIKE_PRODUCTS:
+    case ACTION_TYPE.WISH_LIST_PRODUCTS:
       return {
         ...state,
-        LikeProductsData: combineSelectedProducts(state.LikeProductsData, action.payload),
+        WishListProductsData: combineSelectedProducts(state.WishListProductsData, action.payload),
       };
 
     default:
