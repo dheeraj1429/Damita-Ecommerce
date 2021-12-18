@@ -27,3 +27,38 @@
 .ActiveSideBar {
   right: 0;
 }
+
+.Products_SideBar_Title_Div {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.Products_SideBar_Title_Div h3 {
+  color: var(--IconsColor);
+  font-size: 1.1rem;
+}
+
+.Card_Sub_Toal_Div {
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--SmoothBg);
+}
+.SubTotal_Div_Content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Card_Sub_Button_Div {
+  display: flex;
+}
+.SubTotal_Div_Content h3:nth-child(1) {
+  color: var(--Gray);
+}
+.SubTotal_Div_Content h3 {
+  font-size: 1.1rem;
+}

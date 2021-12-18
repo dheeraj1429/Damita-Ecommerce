@@ -9,8 +9,6 @@ function CustomButtonComponent({ type, InnerData, ButtonClassName }) {
   const selector = useSelector((state) => state.userStoreData);
   const dispatch = useDispatch();
 
-  console.log(selector.CloseModelWindow);
-
   return (
     <Link to={InnerData == 'CONTINUE SHOPPING' ? '/' : `${InnerData.toLowerCase().replaceAll(' ', '')}`}>
       <button

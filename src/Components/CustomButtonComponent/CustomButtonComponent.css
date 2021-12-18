@@ -2,6 +2,8 @@
   padding: 0.8rem 1.2rem;
   cursor: pointer;
   margin-top: 2rem;
+  border: none;
+  border-radius: 5px;
 }
 
 .ShopButton {
@@ -16,4 +18,19 @@
   width: 50%;
   border: none;
   margin-right: 1rem;
+}
+
+.Keep_Shopping {
+  padding: 0.4rem 1rem;
+  margin-top: 0.7rem !important;
+  background-color: var(--TabActiveBarColor);
+  color: var(--mainColor);
+  margin-right: 1rem;
+}
+
+.CheckOutButton {
+  padding: 0.4rem 1rem;
+  margin-top: 0.7rem !important;
+  background-color: var(--NavbarBgColor);
+  color: var(--mainColor);
 }

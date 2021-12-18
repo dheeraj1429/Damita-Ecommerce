@@ -1,0 +1,34 @@
+.AddTo_Card_Products_Show_Div {
+  padding: 1rem;
+  display: flex;
+}
+
+.AddTO_Card_Products_Img_Div {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.AddTO_Card_Products_Img_Div img {
+  width: 100%;
+}
+
+.AddTO_Card_Products_Content {
+  width: 120px;
+}
+
+.AddTO_Card_Products_Content h3 {
+  font-size: 0.9rem;
+  color: var(--TabSecondColor);
+  line-height: 1.2;
+}
+
+.AddTOCard_Price_Div h4 {
+  color: var(--TabActiveBarColor);
+}
+.AddTOCard_Price_Div p {
+  color: var(--ProductsHeadingColor);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
