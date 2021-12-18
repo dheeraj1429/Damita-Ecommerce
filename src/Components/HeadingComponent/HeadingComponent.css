@@ -1,0 +1,53 @@
+.Products_Heading_Inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  border-bottom: 1px solid var(--Lightgray);
+}
+
+.Heading_Content_Div {
+  display: flex;
+}
+
+.Heading_Content_Div p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  color: var(--Gray);
+  cursor: pointer;
+  position: relative;
+}
+
+.Heading_Content_Div p:hover {
+  color: var(--NavbarBgColor);
+}
+
+.Heading_Content_Div p:hover::after {
+  width: 90%;
+}
+
+.Heading_Content_Div p::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: var(--NavbarBgColor);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.HeadingActive {
+  color: var(--NavbarBgColor) !important;
+}
+
+.HeadingActive::after {
+  width: 90% !important;
+}
+
+.Heading_Arrow_Div i {
+  color: var(--Gray);
+  margin: 0 1rem;
+  cursor: pointer;
+}

@@ -8,6 +8,7 @@ const initalState = {
   WishListProductsData: [],
   CloseModelWindow: false,
   SelectedProduct: null,
+  ShowSideBar: false,
 };
 
 const userReducer = function (state = initalState, action) {
@@ -40,6 +41,12 @@ const userReducer = function (state = initalState, action) {
       return {
         ...state,
         SelectedProduct: [action.payload],
+      };
+
+    case ACTION_TYPE.SHOW_SIDE_BAR:
+      return {
+        ...state,
+        ShowSideBar: action.payload,
       };
 
     default:

@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import UserDetailsComponent from '../UserDetailsComponent/UserDetailsComponent';
+import { showSideBar } from '../../Redux/Action/action';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import './NavbarComponent.css';
 
 function NavbarComponent() {
-  const selector = useSelector((state) => state.userStoreData.WishListProductsData);
+  const selector = useSelector((state) => state.userStoreData);
+  const dispatch = useDispatch();
 
   const [Icons, setIcons] = useState([
     {
@@ -45,8 +47,8 @@ function NavbarComponent() {
           {Icons.map((el) =>
             el.ClassIcons == 'fas fa-shopping-bag basket' ? (
               <div className="Basket_Div">
-                <div className="Orders">{selector.length}</div>
-                <i className={el.ClassIcons}></i>
+                <div className="Orders">{selector.WishListProductsData.length}</div>
+                <i className={el.ClassIcons} onClick={() => dispatch(showSideBar(!selector.ShowSideBar))}></i>
               </div>
             ) : (
               <Link to={el.urlPage}>

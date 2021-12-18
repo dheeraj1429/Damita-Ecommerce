@@ -39,3 +39,10 @@ export const selectedProduct = function (data) {
     payload: data,
   };
 };
+
+export const showSideBar = function (data) {
+  return {
+    type: ACTION_TYPE.SHOW_SIDE_BAR,
+    payload: data,
+  };
+};

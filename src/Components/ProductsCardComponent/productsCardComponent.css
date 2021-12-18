@@ -1,16 +1,19 @@
 .Products_Cards__Container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .Products_Card_Inner {
-  width: 380px;
-  height: 480px;
+  width: 350px;
+  height: 450px;
   border: 1px solid var(--borderColor);
   margin: 0 0.5rem;
   padding: 0 2rem;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+.Products_Card_Inner:hover {
+  border: 1px solid var(--NavbarBgColor);
 }
 .New_Products {
   position: absolute;
@@ -69,7 +72,7 @@
 .Products_Icons_div {
   position: absolute;
   top: 0;
-  right: -50px;
+  right: -60px;
   width: 20%;
   height: 100%;
   display: grid;
@@ -88,6 +91,23 @@
   font-size: 1.1rem;
   transition: all 0.3s ease;
 }
+
+.Products_Icon_Inner_Div {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 10px #e1e1e1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem 0;
+  transition: all 0.3s ease;
+}
+
+.Products_Icon_Inner_Div:hover {
+  background-color: var(--NavbarBgColor);
+}
+
 .Products_Icons_div i:hover {
-  color: var(--NavbarBgColor);
+  color: var(--mainColor);
 }

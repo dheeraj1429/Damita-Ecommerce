@@ -14,8 +14,11 @@ function ProductsCardComponent() {
     { icon: 'far fa-heart', id: 2 },
     { icon: 'fas fa-shopping-bag', id: 3 },
   ]);
+
   const selector = useSelector((state) => state.userStoreData);
   const dispatch = useDispatch();
+
+  console.log(selector.Products);
 
   useEffect(() => {
     dispatch(fetchData());
@@ -49,17 +52,19 @@ function ProductsCardComponent() {
               {/* Icons  */}
               <div className="Products_Icons_div">
                 {IconsData.map((item) => (
-                  <i
-                    key={el.id}
-                    className={item.icon}
-                    onClick={() => {
-                      if (item.icon == 'fas fa-shopping-bag') {
-                        dispatch(wishListProducts(el));
-                        dispatch(closeModelWindow(true));
-                        dispatch(selectedProduct(el));
-                      }
-                    }}
-                  ></i>
+                  <div className="Products_Icon_Inner_Div">
+                    <i
+                      key={el.id}
+                      className={item.icon}
+                      onClick={() => {
+                        if (item.icon == 'fas fa-shopping-bag') {
+                          dispatch(wishListProducts(el));
+                          dispatch(closeModelWindow(true));
+                          dispatch(selectedProduct(el));
+                        }
+                      }}
+                    ></i>
+                  </div>
                 ))}
               </div>
             </div>
