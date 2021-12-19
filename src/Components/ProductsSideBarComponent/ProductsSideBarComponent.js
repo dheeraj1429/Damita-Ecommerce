@@ -26,7 +26,7 @@ function ProductsSideBarComponent() {
       <div className={selector.ShowSideBar == true ? 'Products_SideBar_Inner ActiveSideBar' : 'Products_SideBar_Inner'}>
         <div className="Products_SideBar_Title_Div">
           <h3>MY CART</h3>
-          <h3>1 ITEM</h3>
+          <h3>{selector.WishListProductsData.length} ITEM</h3>
         </div>
 
         <div className="AddTOCard_AllProducts">

@@ -9,12 +9,16 @@ import HomePage from './Pages/HomePage/HomePage';
 import NavbarComponent from './Components/NavbarComponent.js/NavbarComponent';
 import SecondNavbarComponent from './Components/SecondNavbarComponent/SecondNavbarComponent';
 import ProductsSinglePage from './Pages/ProductsSinglepage/ProductsSinglePage';
+import ProductsSideBarComponent from './Components/ProductsSideBarComponent/ProductsSideBarComponent';
+import FooterComponent from './Components/FooterComponent/FooterComponent';
 
 function App() {
   return (
     <div className="App">
       <NavbarComponent />
       <SecondNavbarComponent />
+      <ProductsSideBarComponent />
+
       {/* Navbar */}
 
       {/* Routes */}
@@ -24,6 +28,7 @@ function App() {
       </Routes>
 
       {/* Footer */}
+      <FooterComponent />
     </div>
   );
 }

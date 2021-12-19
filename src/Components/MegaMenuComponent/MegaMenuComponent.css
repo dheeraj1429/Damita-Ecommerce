@@ -1,6 +1,5 @@
 .Mega_Menu_Div {
   width: 100%;
-  height: 500px;
   position: absolute;
   top: 70px;
   left: 0;
@@ -9,4 +8,35 @@
   transition: all 0.3s ease;
   background-color: var(--MainColor);
   z-index: 100;
+}
+
+.Mega_Menu_Content {
+  display: flex;
+}
+
+.Mega_Menu_Content_Inner {
+  padding: 1rem 2rem;
+}
+
+.Mega_Menu_Content_Inner h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  position: relative;
+  color: var(--NavbarBgColor);
+}
+
+.Mega_Menu_Content_Inner h3::after {
+  position: absolute;
+  content: '';
+  left: -10px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--NavbarBgColor);
+}
+
+.Mega_Menu_Content_Inner p {
+  margin: 0.8rem 0;
+  color: var(--TabSecondColor);
 }

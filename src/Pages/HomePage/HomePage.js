@@ -6,14 +6,14 @@ import ProductsCardComponent from '../../Components/ProductsCardComponent/produc
 import SidebarComponent from '../../Components/SidebarComponent/SidebarComponent';
 import SlideComponent from '../../Components/SlideComponent/SlideComponent';
 import HeadingComponent from '../../Components/HeadingComponent/HeadingComponent';
-import ProductsSideBarComponent from '../../Components/ProductsSideBarComponent/ProductsSideBarComponent';
+import BannerSectionComponent from '../../Components/BannerSectionComponent/BannerSectionComponent';
 
 import './HomePage.css';
+import NewsLetterComponent from '../../Components/NewsLetterComponent.js/NewsLetterComponent';
 
 function HomePage() {
   return (
     <div>
-      <ProductsSideBarComponent />
       <BadgeComponent />
 
       <div className="HomePage__Banner_Div Container">
@@ -31,8 +31,13 @@ function HomePage() {
       <BannerCardsComponent />
 
       <HeadingComponent />
+
       {/* Products Cards */}
       <ProductsCardComponent />
+
+      <BannerSectionComponent />
+
+      <NewsLetterComponent />
     </div>
   );
 }

@@ -1,0 +1,25 @@
+.Banner_Section_Div_Inner_Card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Banner_Section_Div_Inner_Card img {
+  height: 100%;
+}
+
+.Video {
+  height: 560px;
+}
+
+.Banner_Section_Card_ZtD > div {
+  margin: 1rem 0;
+  width: 400px;
+  height: 270px;
+  overflow: hidden;
+}
+
+.Banner_Section_Card_ZtD img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,27 @@
+.SendEmail_Div {
+  width: 600px;
+  height: 45px;
+  display: flex;
+}
+
+.SendEmail_Div input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 1rem;
+  outline: none;
+}
+
+.Send_Email_Button_Div {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--SideBarBgColor);
+  cursor: pointer;
+}
+.Send_Email_Button_Div i {
+  color: var(--mainColor);
+  font-size: 1.1rem;
+}

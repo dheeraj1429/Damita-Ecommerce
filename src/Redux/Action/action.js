@@ -46,3 +46,10 @@ export const showSideBar = function (data) {
     payload: data,
   };
 };
+
+export const setEmailData = function (data) {
+  return {
+    type: ACTION_TYPE.SET_EMAIL_ADDRESS,
+    payload: data,
+  };
+};

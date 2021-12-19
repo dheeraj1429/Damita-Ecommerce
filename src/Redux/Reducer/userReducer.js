@@ -9,6 +9,7 @@ const initalState = {
   CloseModelWindow: false,
   SelectedProduct: null,
   ShowSideBar: false,
+  UserEmail: null,
 };
 
 const userReducer = function (state = initalState, action) {
@@ -47,6 +48,12 @@ const userReducer = function (state = initalState, action) {
       return {
         ...state,
         ShowSideBar: action.payload,
+      };
+
+    case ACTION_TYPE.SET_EMAIL_ADDRESS:
+      return {
+        ...state,
+        UserEmail: action.payload,
       };
 
     default:

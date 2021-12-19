@@ -7,26 +7,24 @@ import './SecondNavbarComponent.css';
 function SecondNavbarComponent() {
   const [NavbarLinks, setNavbarLinks] = useState([{ name: 'HOME' }, { name: 'SHOP' }, { name: 'PAGES' }, { name: 'CONTACT US' }, { name: 'ABOUT' }]);
 
-  const [ShowMegaMenu, setShowMegaMenu] = useState(false);
+  // const [ShowMegaMenu, setShowMegaMenu] = useState(false);
 
-  const ShowMegeMenu = function () {
-    setShowMegaMenu(true);
-  };
+  // const ShowMegeMenu = function () {
+  //   setShowMegaMenu(true);
+  // };
 
-  const HideMegaMenu = function () {
-    setShowMegaMenu(false);
-  };
+  // const HideMegaMenu = function () {
+  //   setShowMegaMenu(false);
+  // };
 
   return (
     <div className="Second__Navbar_Div Container">
       {/* Links */}
       <div className="Navbar__Links">
         {NavbarLinks.map((el) => (
-          <p onMouseEnter={ShowMegeMenu} onMouseLeave={HideMegaMenu}>
+          <p>
             {el.name}
-            <span>
-              <i class="fas fa-chevron-down"></i>
-            </span>
+            <span>{/* <i class="fas fa-chevron-down"></i> */}</span>
           </p>
         ))}
       </div>
@@ -34,7 +32,7 @@ function SecondNavbarComponent() {
       <SearchBarComponent />
 
       {/* Mega Menu Component */}
-      <MegaMenuComponent Data={ShowMegaMenu} />
+      {/* <MegaMenuComponent Data={ShowMegaMenu} /> */}
     </div>
   );
 }

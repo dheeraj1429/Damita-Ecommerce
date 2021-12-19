@@ -4,13 +4,17 @@ import './MegaMenuComponent.css';
 
 function MegaMenuComponent({ Data }) {
   const ShowMegaMenuFunction = function (e) {
-    e.target.style.visibility = 'visible';
-    e.target.style.transform = 'translate(0)';
+    if (e.target.classList.contains('Mega_Menu_Div')) {
+      e.target.style.visibility = 'visible';
+      e.target.style.transform = 'translate(0)';
+    }
   };
 
   const HideMegaMenu = function (e) {
-    e.target.style.visibility = 'hidden';
-    e.target.style.transform = 'translateY(70px)';
+    if (e.target.classList.contains('Mega_Menu_Div')) {
+      e.target.style.visibility = 'hidden';
+      e.target.style.transform = 'translateY(70px)';
+    }
   };
 
   return (
@@ -28,7 +32,31 @@ function MegaMenuComponent({ Data }) {
               transform: 'translate(0)',
             }
       }
-    ></div>
+    >
+      <div className="Mega_Menu_Content">
+        <div className="Mega_Menu_Content_Inner">
+          <h3>Featured</h3>
+          <p>New Release</p>
+          <p>New Members</p>
+          <p>Neutrals</p>
+          <p>Member Access</p>
+        </div>
+        <div className="Mega_Menu_Content_Inner">
+          <h3>Shoes</h3>
+          <p>Basketball</p>
+          <p>FootBall</p>
+          <p>Runing</p>
+          <p>All Shoes</p>
+        </div>
+        <div className="Mega_Menu_Content_Inner">
+          <h3>Cloting</h3>
+          <p>Top</p>
+          <p>Bootom</p>
+          <p>Outwears</p>
+          <p>Tracksuits</p>
+        </div>
+      </div>
+    </div>
   );
 }
 

@@ -1,0 +1,26 @@
+.NewsLetter_Inner_Div {
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: var(--NavbarBgColor);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.NewsLetter_Content h2 {
+  color: var(--mainColor);
+}
+
+.NewsLetter_Content p {
+  color: var(--mainColor);
+  font-size: 0.9rem;
+}
+
+.NewsLetter_Inner_Div h3 {
+  font-size: 2rem;
+  color: var(--mainColor);
+}
+
+.NewsLetter_Inner_Div p {
+  color: var(--mainColor);
+}

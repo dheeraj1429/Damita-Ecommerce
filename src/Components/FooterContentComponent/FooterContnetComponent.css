@@ -1,0 +1,15 @@
+.Footer_Container_Div h3 {
+  color: var(--mainColor);
+  margin-bottom: 2rem;
+}
+
+.Footer_Container_Div p {
+  color: var(--RagulrPlace);
+  margin: 1rem 0;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.Footer_Container_Div span {
+  color: var(--NavbarBgColor);
+}

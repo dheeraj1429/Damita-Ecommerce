@@ -1,0 +1,25 @@
+.Footer_Div {
+  width: 100%;
+  background-color: var(--SideBarBgColor);
+}
+
+.Footer_Container_Div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.Footer_Container_Div > div {
+  padding: 0 2rem;
+}
+
+.Footer_Container_Div > div:nth-child(1) {
+  border-right: 1px solid var(--IconsColor);
+}
+
+.Footer_Container_Div > div:nth-child(2) {
+  border-right: 1px solid var(--IconsColor);
+}
+
+.Footer_Container_Div > div:nth-child(3) {
+  border-right: 1px solid var(--IconsColor);
+}
