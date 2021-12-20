@@ -1,0 +1,92 @@
+.Products_Single_Page_Inner_Div {
+  display: flex;
+}
+
+.Products_Single_Img_Data {
+  width: auto;
+  height: auto;
+  margin-right: 3rem;
+}
+
+.Img_Prev {
+  width: 600px;
+  height: 600px;
+}
+
+.Img_Prev img {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.7);
+}
+
+.Img_Prev_Sm {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: space-between;
+}
+
+.Img_Prev_Cards {
+  width: 130px;
+  height: 130px;
+  border: 1px solid var(--borderColor);
+}
+
+.Img_Prev_Cards img {
+  width: 100%;
+  height: 100%;
+}
+
+.Products_Single_Contnet_Data h3 {
+  font-size: 1.6rem;
+  color: var(--IconsColor);
+}
+
+.Products_Single_Contnet_Data h4 {
+  font-size: 2.3rem;
+  color: var(--NavbarBgColor);
+  margin: 1rem 0;
+}
+
+.Products_Discription_Div {
+  margin: 1rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid var(--borderColor);
+}
+
+.Products_Discription_Div p {
+  color: var(--Gray);
+  line-height: 1.4;
+}
+
+.Single_Page_Input_Div {
+  display: flex;
+}
+
+.Inc_Dec_Input_Div {
+  width: 150px;
+  height: 47px;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Inc_Dec_Input_Div .Input_Div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border-left: 1px solid var(--lightGry);
+  border-top: 1px solid var(--lightGry);
+  border-bottom: 1px solid var(--lightGry);
+}
+.Inc_Div {
+  cursor: pointer;
+}
+.Dec_Div {
+  border-right: 1px solid var(--lightGry);
+  cursor: pointer;
+}

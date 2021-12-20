@@ -34,3 +34,11 @@
   background-color: var(--NavbarBgColor);
   color: var(--mainColor);
 }
+
+.Add_to_cart {
+  background-color: var(--NavbarBgColor);
+  color: var(--mainColor);
+  padding: 1rem 4rem;
+  border-radius: 0;
+  font-weight: 600;
+}

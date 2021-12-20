@@ -36,7 +36,7 @@ function ProductsCardComponent() {
               </div>
               <div className="Product_Image_Div">
                 <Link to={`Ecommerce/Products:${el.shortTitle}`}>
-                  <img src={el.posterUrl} />
+                  <img src={el.posterUrl} onClick={() => dispatch(selectedProduct(el))} />
                 </Link>
               </div>
               <div className="Products_Container_div">
@@ -60,7 +60,6 @@ function ProductsCardComponent() {
                         if (item.icon == 'fas fa-shopping-bag') {
                           dispatch(wishListProducts(el));
                           dispatch(closeModelWindow(true));
-                          dispatch(selectedProduct(el));
                         }
                       }}
                     ></i>
