@@ -11,7 +11,7 @@ function ProductsSideBarComponent() {
   const dispatch = useDispatch();
   let sum = 0;
 
-  selector.WishListProductsData.map((el) => {
+  selector.AddToCardProducts.map((el) => {
     sum += el.totalPrice;
   });
 
@@ -26,12 +26,12 @@ function ProductsSideBarComponent() {
       <div className={selector.ShowSideBar == true ? 'Products_SideBar_Inner ActiveSideBar' : 'Products_SideBar_Inner'}>
         <div className="Products_SideBar_Title_Div">
           <h3>MY CART</h3>
-          <h3>{selector.WishListProductsData.length} ITEM</h3>
+          <h3>{selector.AddToCardProducts.length} ITEM</h3>
         </div>
 
         <div className="AddTOCard_AllProducts">
-          {selector.WishListProductsData.length > 0
-            ? selector.WishListProductsData.map(({ id, ...otherProps }) => <SmallProductsShowCardComponent key={id} {...otherProps} />)
+          {selector.AddToCardProducts.length > 0
+            ? selector.AddToCardProducts.map(({ id, ...otherProps }) => <SmallProductsShowCardComponent key={id} {...otherProps} />)
             : null}
         </div>
 

@@ -47,7 +47,7 @@ function NavbarComponent() {
           {Icons.map((el) =>
             el.ClassIcons == 'fas fa-shopping-bag basket' ? (
               <div className="Basket_Div">
-                <div className="Orders">{selector.WishListProductsData.length}</div>
+                <div className="Orders">{selector.AddToCardProducts.length}</div>
                 <i className={el.ClassIcons} onClick={() => dispatch(showSideBar(!selector.ShowSideBar))}></i>
               </div>
             ) : (

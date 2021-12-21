@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import CustomButtonComponent from '../../Components/CustomButtonComponent/CustomButtonComponent';
 
 import { useSelector } from 'react-redux';
+import ProductsImageComponent from '../../Components/ProductImageComponent/ProductsImageComponent';
 
 import './ProductsSinglePage.css';
+import ProductsCardComponent from '../../Components/ProductsCardComponent/productsCardComponent';
 
 function ProductsSinglePage() {
-  const [ProductData, setProductData] = useState('');
   const [ProductQty, setProductQty] = useState(1);
   const selector = useSelector((state) => state.userStoreData.SelectedProduct);
 
@@ -25,18 +26,8 @@ function ProductsSinglePage() {
       {selector !== null ? (
         <div className="Products_Single_page Container">
           <div className="Products_Single_Page_Inner_Div padding_One">
-            <div className="Products_Single_Img_Data">
-              <div className="Img_Prev">{ProductData ? <img src={ProductData} /> : <img src={selector[0].posterUrl} />}</div>
-              <div className="Img_Prev_Sm">
-                {selector[0]
-                  ? selector[0].shortImages.map((el) => (
-                      <div className="Img_Prev_Cards" key={el.id}>
-                        <img src={el.url} onMouseEnter={() => setProductData(el.url)} />
-                      </div>
-                    ))
-                  : null}
-              </div>
-            </div>
+            <ProductsImageComponent data={selector} />
+
             <div className="Products_Single_Contnet_Data">
               <h3>{selector[0].Discription}</h3>
               <h4>${selector[0].Deal_of_the_Day}</h4>
@@ -59,6 +50,8 @@ function ProductsSinglePage() {
           </div>
         </div>
       ) : null}
+
+      <ProductsCardComponent />
     </>
   );
 }

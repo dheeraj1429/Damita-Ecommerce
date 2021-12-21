@@ -5,7 +5,7 @@ import { combineSelectedProducts } from '../../Products/Products-Group';
 const initalState = {
   ShowMegaMenu: false,
   Products: null,
-  WishListProductsData: [],
+  AddToCardProducts: [],
   CloseModelWindow: false,
   SelectedProduct: null,
   ShowSideBar: false,

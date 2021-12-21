@@ -17,22 +17,18 @@ function HomePage() {
       <BadgeComponent />
 
       <div className="HomePage__Banner_Div Container">
-        {/* Side bar Component */}
         <SidebarComponent />
 
         {/* 1 swith between the side bar component */}
         {/* 2 slider banner */}
 
-        {/* Slider Section */}
         <SlideComponent />
       </div>
 
-      {/* Banner Cards Section */}
       <BannerCardsComponent />
 
       <HeadingComponent />
 
-      {/* Products Cards */}
       <ProductsCardComponent />
 
       <BannerSectionComponent />

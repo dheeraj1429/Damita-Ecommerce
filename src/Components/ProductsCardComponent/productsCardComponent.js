@@ -35,7 +35,7 @@ function ProductsCardComponent() {
                 <p>-{Math.trunc((el.Deal_of_the_Day / el.ragulerPrice) * 100)}%</p>
               </div>
               <div className="Product_Image_Div">
-                <Link to={`Ecommerce/Products:${el.shortTitle}`}>
+                <Link to={`/Ecommerce/Products:${el.shortTitle}`}>
                   <img src={el.posterUrl} onClick={() => dispatch(selectedProduct(el))} />
                 </Link>
               </div>
