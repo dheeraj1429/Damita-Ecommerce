@@ -10,6 +10,9 @@ const initalState = {
   SelectedProduct: null,
   ShowSideBar: false,
   UserEmail: null,
+  WishListProducts: [],
+  ShowProductPrev: false,
+  ShowProductPrevData: null,
 };
 
 const userReducer = function (state = initalState, action) {
@@ -26,10 +29,10 @@ const userReducer = function (state = initalState, action) {
         Products: [...action.payload],
       };
 
-    case ACTION_TYPE.WISH_LIST_PRODUCTS:
+    case ACTION_TYPE.ADD_TO_CARD_PRODUCTS:
       return {
         ...state,
-        WishListProductsData: combineSelectedProducts(state.WishListProductsData, action.payload),
+        AddToCardProducts: combineSelectedProducts(state.AddToCardProducts, action.payload),
       };
 
     case ACTION_TYPE.CLOSE_MODEL_WINDOW:
@@ -54,6 +57,24 @@ const userReducer = function (state = initalState, action) {
       return {
         ...state,
         UserEmail: action.payload,
+      };
+
+    case ACTION_TYPE.WISH_LIST_PRODUCTS:
+      return {
+        ...state,
+        WishListProducts: combineSelectedProducts(state.WishListProducts, action.payload),
+      };
+
+    case ACTION_TYPE.SHOP_PRODUCT_PREV:
+      return {
+        ...state,
+        ShowProductPrev: action.payload,
+      };
+
+    case ACTION_TYPE.SHOP_PRODUCT_PREV_DATA:
+      return {
+        ...state,
+        ShowProductPrevData: action.payload,
       };
 
     default:

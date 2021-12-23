@@ -19,9 +19,9 @@ export const fetchData = function () {
   };
 };
 
-export const wishListProducts = function (data) {
+export const addTocardProducts = function (data) {
   return {
-    type: ACTION_TYPE.WISH_LIST_PRODUCTS,
+    type: ACTION_TYPE.ADD_TO_CARD_PRODUCTS,
     payload: data,
   };
 };
@@ -50,6 +50,27 @@ export const showSideBar = function (data) {
 export const setEmailData = function (data) {
   return {
     type: ACTION_TYPE.SET_EMAIL_ADDRESS,
+    payload: data,
+  };
+};
+
+export const addToWishList = function (data) {
+  return {
+    type: ACTION_TYPE.WISH_LIST_PRODUCTS,
+    payload: data,
+  };
+};
+
+export const showProductPrev = function (data) {
+  return {
+    type: ACTION_TYPE.SHOP_PRODUCT_PREV,
+    payload: data,
+  };
+};
+
+export const showProductPrevData = function (data) {
+  return {
+    type: ACTION_TYPE.SHOP_PRODUCT_PREV_DATA,
     payload: data,
   };
 };

@@ -1,0 +1,55 @@
+.Products_Images_View {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.616);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  position: fixed;
+}
+
+.HideProducts_Image_View {
+  transition: all 0.3s ease;
+  visibility: hidden;
+}
+
+.Products_image {
+  width: 80%;
+  height: 80%;
+  background-color: var(--mainColor);
+  position: relative;
+  display: flex;
+  padding: 1rem;
+}
+
+.Products_close_Button_Div {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.Products_image img {
+  height: 100%;
+  margin-right: 2rem;
+  transform: scale(0.7);
+}
+
+.Products_Dec h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Product_dec_Div {
+  border-top: 1px solid var(--Lightgray);
+}
+
+.Products_Dec p {
+  margin: 1rem 0;
+  color: var(--ProductsHeadingColor);
+  line-height: 1.4;
+}

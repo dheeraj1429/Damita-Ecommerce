@@ -3,8 +3,17 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { fetchData, wishListProducts, closeModelWindow, selectedProduct } from '../../Redux/Action/action';
+import {
+  fetchData,
+  addTocardProducts,
+  closeModelWindow,
+  selectedProduct,
+  addToWishList,
+  showProductPrev,
+  showProductPrevData,
+} from '../../Redux/Action/action';
 import AddToCardPopupComponent from '../AddToCardPopupComponent/AddToCardPopupComponent';
+import ImageViewComponent from '../ImageViewComponent/ImageViewComponent';
 
 import './productsCardComponent.css';
 
@@ -18,8 +27,6 @@ function ProductsCardComponent() {
   const selector = useSelector((state) => state.userStoreData);
   const dispatch = useDispatch();
 
-  console.log(selector.Products);
-
   useEffect(() => {
     dispatch(fetchData());
   }, []);
@@ -27,6 +34,7 @@ function ProductsCardComponent() {
   return (
     <div className="Products_Cards__Container Container padding_One">
       <AddToCardPopupComponent />
+      <ImageViewComponent />
 
       {selector.Products !== null
         ? selector.Products.slice(0, 4).map((el) => (
@@ -58,8 +66,14 @@ function ProductsCardComponent() {
                       className={item.icon}
                       onClick={() => {
                         if (item.icon == 'fas fa-shopping-bag') {
-                          dispatch(wishListProducts(el));
+                          dispatch(addTocardProducts(el));
                           dispatch(closeModelWindow(true));
+                          dispatch(selectedProduct(el));
+                        } else if (item.icon == 'far fa-heart') {
+                          dispatch(addToWishList(el));
+                        } else if (item.icon == 'fas fa-search') {
+                          dispatch(showProductPrev(!selector.ShowProductPrev));
+                          dispatch(showProductPrevData(el));
                         }
                       }}
                     ></i>

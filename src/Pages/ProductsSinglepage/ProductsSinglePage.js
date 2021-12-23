@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 import ProductsImageComponent from '../../Components/ProductImageComponent/ProductsImageComponent';
 
 import './ProductsSinglePage.css';
-import ProductsCardComponent from '../../Components/ProductsCardComponent/productsCardComponent';
 
 function ProductsSinglePage() {
   const [ProductQty, setProductQty] = useState(1);
@@ -50,8 +49,6 @@ function ProductsSinglePage() {
           </div>
         </div>
       ) : null}
-
-      <ProductsCardComponent />
     </>
   );
 }

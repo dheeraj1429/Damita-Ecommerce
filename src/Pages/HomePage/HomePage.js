@@ -18,21 +18,13 @@ function HomePage() {
 
       <div className="HomePage__Banner_Div Container">
         <SidebarComponent />
-
-        {/* 1 swith between the side bar component */}
-        {/* 2 slider banner */}
-
         <SlideComponent />
       </div>
 
       <BannerCardsComponent />
-
       <HeadingComponent />
-
       <ProductsCardComponent />
-
       <BannerSectionComponent />
-
       <NewsLetterComponent />
     </div>
   );
