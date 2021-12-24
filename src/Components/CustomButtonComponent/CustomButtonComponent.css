@@ -42,3 +42,31 @@
   border-radius: 0;
   font-weight: 600;
 }
+
+.FullWidthDiv {
+  max-width: 400px;
+  margin: auto;
+}
+
+.AddToCard_PopupButton {
+  color: var(--mainColor);
+  background-color: var(--SideBarBgColor);
+  border-radius: 0;
+  width: 100%;
+  box-shadow: 2px 10px 10px #3a38388a;
+  transition: all 0.2s ease;
+}
+
+.AddToCard_PopupButton:hover {
+  background-color: var(--NavbarBgColor);
+}
+
+.Continue_shopping_Button {
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  border: 1px solid var(--SideBarBgColor);
+  background-color: transparent;
+  border-radius: 0 !important;
+  margin-right: 1rem;
+}

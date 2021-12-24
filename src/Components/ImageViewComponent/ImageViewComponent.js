@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { showProductPrev } from '../../Redux/Action/action';
-
+import CustomButtonComponent from '../CustomButtonComponent/CustomButtonComponent';
 import './ImageViewComponent.css';
 
 function ImageViewComponent() {
@@ -15,6 +15,9 @@ function ImageViewComponent() {
       {selector.ShowProductPrevData !== null ? (
         <div className={!selector.ShowProductPrev ? 'Products_Images_View HideProducts_Image_View' : 'Products_Images_View'}>
           <div className="Products_image">
+            <div className="Givaway_Div">
+              <h4>GIVAWAY</h4>
+            </div>
             <div
               className="Products_close_Button_Div"
               onClick={() => {
@@ -31,6 +34,9 @@ function ImageViewComponent() {
               <h1>{selector.ShowProductPrevData.Discription}</h1>
               <div className="Product_dec_Div">
                 <p>{selector.ShowProductPrevData.About}</p>
+              </div>
+              <div className="FullWidthDiv">
+                <CustomButtonComponent type={'button'} InnerData={'ADD TO CARD'} ButtonClassName={'AddToCard_PopupButton'} />
               </div>
             </div>
           </div>

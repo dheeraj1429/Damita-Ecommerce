@@ -23,7 +23,22 @@
   background-color: var(--mainColor);
   position: relative;
   display: flex;
+  padding: 2rem 1rem;
+}
+
+.Givaway_Div {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  background-color: var(--NavbarBgColor);
+  color: var(--mainColor);
+  width: 250px;
   padding: 1rem;
+  padding-left: 1rem;
+  border-radius: 0 50px 50px 0;
+}
+.Givaway_Div h4 {
+  font-size: 1.4rem;
 }
 
 .Products_close_Button_Div {
@@ -51,5 +66,5 @@
 .Products_Dec p {
   margin: 1rem 0;
   color: var(--ProductsHeadingColor);
-  line-height: 1.4;
+  line-height: 1.5;
 }

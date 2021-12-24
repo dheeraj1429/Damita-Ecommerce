@@ -27,6 +27,19 @@ function ProductsCardComponent() {
   const selector = useSelector((state) => state.userStoreData);
   const dispatch = useDispatch();
 
+  const IconEventHandler = function (item, el) {
+    if (item == 'fas fa-shopping-bag') {
+      dispatch(addTocardProducts(el));
+      dispatch(closeModelWindow(true));
+      dispatch(selectedProduct(el));
+    } else if (item == 'far fa-heart') {
+      dispatch(addToWishList(el));
+    } else if (item == 'fas fa-search') {
+      dispatch(showProductPrev(!selector.ShowProductPrev));
+      dispatch(showProductPrevData(el));
+    }
+  };
+
   useEffect(() => {
     dispatch(fetchData());
   }, []);
@@ -61,22 +74,7 @@ function ProductsCardComponent() {
               <div className="Products_Icons_div">
                 {IconsData.map((item) => (
                   <div className="Products_Icon_Inner_Div">
-                    <i
-                      key={el.id}
-                      className={item.icon}
-                      onClick={() => {
-                        if (item.icon == 'fas fa-shopping-bag') {
-                          dispatch(addTocardProducts(el));
-                          dispatch(closeModelWindow(true));
-                          dispatch(selectedProduct(el));
-                        } else if (item.icon == 'far fa-heart') {
-                          dispatch(addToWishList(el));
-                        } else if (item.icon == 'fas fa-search') {
-                          dispatch(showProductPrev(!selector.ShowProductPrev));
-                          dispatch(showProductPrevData(el));
-                        }
-                      }}
-                    ></i>
+                    <i key={el.id} className={item.icon} onClick={() => IconEventHandler(item.icon, el)}></i>
                   </div>
                 ))}
               </div>

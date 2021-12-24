@@ -74,3 +74,16 @@ export const showProductPrevData = function (data) {
     payload: data,
   };
 };
+
+export const removeWhislistProducts = function (data) {
+  return {
+    type: ACTION_TYPE.REMOVE_WISHLIST_PRODUCTS,
+    payload: data,
+  };
+};
+
+export const removeAllProducts = function () {
+  return {
+    type: ACTION_TYPE.REMOVE_ALL_PRODUCTS,
+  };
+};

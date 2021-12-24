@@ -1,0 +1,31 @@
+.Products_Summer_Tab {
+  border: 1px solid var(--SmoothBg);
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.Products_Summer_Inner_Div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.All_Products_Coupens {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.Summer_Details_Div_inner {
+  display: flex;
+  align-items: center;
+}
+
+.Products_Summer_Content_Div {
+  padding: 2rem 1rem;
+}
+
+.Products_Summer_Content_Div h1 {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  color: var(--ProductsHeadingColor);
+}

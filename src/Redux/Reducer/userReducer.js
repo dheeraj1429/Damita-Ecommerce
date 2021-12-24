@@ -65,6 +65,19 @@ const userReducer = function (state = initalState, action) {
         WishListProducts: combineSelectedProducts(state.WishListProducts, action.payload),
       };
 
+    case ACTION_TYPE.REMOVE_WISHLIST_PRODUCTS:
+      const removeData = state.WishListProducts.filter((el) => el.shortTitle !== action.payload);
+      return {
+        ...state,
+        WishListProducts: removeData,
+      };
+
+    case ACTION_TYPE.REMOVE_ALL_PRODUCTS:
+      return {
+        ...state,
+        WishListProducts: [],
+      };
+
     case ACTION_TYPE.SHOP_PRODUCT_PREV:
       return {
         ...state,

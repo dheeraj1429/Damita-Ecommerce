@@ -1,0 +1,17 @@
+.Wishlist_Products_Img_div {
+  display: flex;
+  align-items: center;
+}
+.Wishlist_Products_Img_div img {
+  width: auto;
+  height: 100px;
+  margin-right: 1rem;
+}
+
+.Wishlist_Products_Img_div h3 {
+  color: var(--IconsColor);
+}
+
+.Remove_Products {
+  cursor: pointer;
+}

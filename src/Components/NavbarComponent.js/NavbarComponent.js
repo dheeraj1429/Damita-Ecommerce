@@ -51,7 +51,7 @@ function NavbarComponent() {
                 <i className={el.ClassIcons} onClick={() => dispatch(showSideBar(!selector.ShowSideBar))}></i>
               </div>
             ) : (
-              <Link to={el.urlPage}>
+              <Link to={el.urlPage == 'Like' ? '/Wishlist/Products' : el.urlPage}>
                 <i className={el.ClassIcons}></i>
               </Link>
             )

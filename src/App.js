@@ -11,6 +11,7 @@ import SecondNavbarComponent from './Components/SecondNavbarComponent/SecondNavb
 import ProductsSinglePage from './Pages/ProductsSinglepage/ProductsSinglePage';
 import ProductsSideBarComponent from './Components/ProductsSideBarComponent/ProductsSideBarComponent';
 import FooterComponent from './Components/FooterComponent/FooterComponent';
+import WishLsitPage from './Pages/WishListPage/WishLsitPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/Ecommerce/Products:Name" element={<ProductsSinglePage />} />
+        <Route exact path="/Wishlist/Products" element={<WishLsitPage />} />
       </Routes>
 
       {/* Footer */}
