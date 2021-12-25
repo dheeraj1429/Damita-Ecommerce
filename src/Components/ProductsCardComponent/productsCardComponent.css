@@ -111,3 +111,38 @@
 .Products_Icons_div i:hover {
   color: var(--mainColor);
 }
+
+.Products_Notification_Bar {
+  width: 350px;
+  height: 70px;
+  z-index: 300;
+  bottom: 20px;
+  position: fixed;
+  right: -400px;
+  background-color: var(--mainColor);
+  box-shadow: 0 0 10px #a1a1a1;
+  border-radius: 5px;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.showNOtifictionBar {
+  right: 20px;
+  transition: all 0.3s ease;
+}
+
+.Products_Notification_Img_Div {
+  width: 100px;
+  height: 100%;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Products_Notification_Img_Div img {
+  width: auto;
+  height: 100%;
+}

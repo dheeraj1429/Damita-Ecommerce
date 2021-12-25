@@ -24,6 +24,13 @@ function ProductsCardComponent() {
     { icon: 'fas fa-shopping-bag', id: 3 },
   ]);
 
+  const [ProductsImageRef, setProductsImagesRef] = useState([
+    {
+      ProductRef: '',
+      ShowNotifictionBar: false,
+    },
+  ]);
+
   const selector = useSelector((state) => state.userStoreData);
   const dispatch = useDispatch();
 
@@ -34,11 +41,18 @@ function ProductsCardComponent() {
       dispatch(selectedProduct(el));
     } else if (item == 'far fa-heart') {
       dispatch(addToWishList(el));
+      setProductsImagesRef({ ProductRef: el.posterUrl });
     } else if (item == 'fas fa-search') {
       dispatch(showProductPrev(!selector.ShowProductPrev));
       dispatch(showProductPrevData(el));
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setProductsImagesRef({ ShowNotifictionBar: false });
+    }, 2500);
+  }, [ProductsImageRef.ShowNotifictionBar]);
 
   useEffect(() => {
     dispatch(fetchData());
@@ -48,6 +62,15 @@ function ProductsCardComponent() {
     <div className="Products_Cards__Container Container padding_One">
       <AddToCardPopupComponent />
       <ImageViewComponent />
+
+      <div className={ProductsImageRef.ShowNotifictionBar == false ? 'Products_Notification_Bar' : 'Products_Notification_Bar showNOtifictionBar'}>
+        <div className="Products_Notification_Img_Div">
+          <img src={ProductsImageRef.ProductRef} />
+        </div>
+        <div>
+          <p>Added Into the Wishlist</p>
+        </div>
+      </div>
 
       {selector.Products !== null
         ? selector.Products.slice(0, 4).map((el) => (
