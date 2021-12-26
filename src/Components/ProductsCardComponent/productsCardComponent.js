@@ -23,11 +23,11 @@ function ProductsCardComponent() {
     { icon: 'far fa-heart', id: 2 },
     { icon: 'fas fa-shopping-bag', id: 3 },
   ]);
+  const [ShowNotification, setShowNotification] = useState(false);
 
   const [ProductsImageRef, setProductsImagesRef] = useState([
     {
       ProductRef: '',
-      ShowNotifictionBar: false,
     },
   ]);
 
@@ -42,6 +42,7 @@ function ProductsCardComponent() {
     } else if (item == 'far fa-heart') {
       dispatch(addToWishList(el));
       setProductsImagesRef({ ProductRef: el.posterUrl });
+      setShowNotification(true);
     } else if (item == 'fas fa-search') {
       dispatch(showProductPrev(!selector.ShowProductPrev));
       dispatch(showProductPrevData(el));
@@ -50,9 +51,9 @@ function ProductsCardComponent() {
 
   useEffect(() => {
     setTimeout(() => {
-      setProductsImagesRef({ ShowNotifictionBar: false });
+      setShowNotification(false);
     }, 2500);
-  }, [ProductsImageRef.ShowNotifictionBar]);
+  }, [ShowNotification]);
 
   useEffect(() => {
     dispatch(fetchData());
@@ -63,7 +64,7 @@ function ProductsCardComponent() {
       <AddToCardPopupComponent />
       <ImageViewComponent />
 
-      <div className={ProductsImageRef.ShowNotifictionBar == false ? 'Products_Notification_Bar' : 'Products_Notification_Bar showNOtifictionBar'}>
+      <div className={!ShowNotification ? 'Products_Notification_Bar ' : 'Products_Notification_Bar showNotification_div'}>
         <div className="Products_Notification_Img_Div">
           <img src={ProductsImageRef.ProductRef} />
         </div>

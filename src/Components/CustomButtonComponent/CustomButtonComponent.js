@@ -3,20 +3,37 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeModelWindow } from '../../Redux/Action/action';
 import { useLocation } from 'react-router';
+import { showSideBar } from '../../Redux/Action/action';
 
 import './CustomButtonComponent.css';
 
 function CustomButtonComponent({ type, InnerData, ButtonClassName, onClick }) {
   const location = useLocation();
-  const selector = useSelector((state) => state.userStoreData);
   const dispatch = useDispatch();
+
+  const ChangeUrlLoactionFunction = function (data) {
+    return `${data.toLowerCase().replaceAll(' ', '')}`;
+  };
+
+  const DispatchFunction = function () {
+    dispatch(closeModelWindow(false));
+    dispatch(showSideBar(false));
+  };
 
   return (
     <Link
       to={
-        InnerData == 'CONTINUE SHOPPING' || InnerData == 'CLEAR WISHLIST CARD'
+        InnerData == 'CLEAR WISHLIST CARD'
           ? `${location.pathname}`
-          : `${InnerData.toLowerCase().replaceAll(' ', '')}`
+          : ChangeUrlLoactionFunction(InnerData)
+          ? InnerData == 'CONTINUE SHOPPING'
+            ? '/'
+            : ChangeUrlLoactionFunction(InnerData)
+            ? InnerData == 'ADD TO CART'
+              ? '/card'
+              : ChangeUrlLoactionFunction(InnerData)
+            : null
+          : null
       }
     >
       <button
@@ -27,7 +44,7 @@ function CustomButtonComponent({ type, InnerData, ButtonClassName, onClick }) {
             ? () => {
                 onClick();
               }
-            : () => dispatch(closeModelWindow(false))
+            : () => DispatchFunction()
         }
       >
         {InnerData}

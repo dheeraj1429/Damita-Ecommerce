@@ -58,7 +58,7 @@ function AddToCardPopupComponent() {
           </div>
 
           <div className="AddToCard_PopUp_Div_Buttons">
-            <CustomButtonComponent type={'button'} InnerData={'View Cart'} ButtonClassName={'View-Cart-Button'} />
+            <CustomButtonComponent type={'button'} InnerData={'ADD TO CART'} ButtonClassName={'View-Cart-Button'} />
             <CustomButtonComponent type={'button'} InnerData={'CONTINUE SHOPPING'} ButtonClassName={'View-Cart-Button'} />
           </div>
         </div>

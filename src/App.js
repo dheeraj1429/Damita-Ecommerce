@@ -10,8 +10,11 @@ import NavbarComponent from './Components/NavbarComponent.js/NavbarComponent';
 import SecondNavbarComponent from './Components/SecondNavbarComponent/SecondNavbarComponent';
 import ProductsSinglePage from './Pages/ProductsSinglepage/ProductsSinglePage';
 import ProductsSideBarComponent from './Components/ProductsSideBarComponent/ProductsSideBarComponent';
+
+// Pages
 import FooterComponent from './Components/FooterComponent/FooterComponent';
 import WishLsitPage from './Pages/WishListPage/WishLsitPage';
+import CardPage from './Pages/CardPage/CardPage';
 
 function App() {
   return (
@@ -27,6 +30,7 @@ function App() {
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/Ecommerce/Products:Name" element={<ProductsSinglePage />} />
         <Route exact path="/Wishlist/Products" element={<WishLsitPage />} />
+        <Route exact path="/Card" element={<CardPage />} />
       </Routes>
 
       {/* Footer */}

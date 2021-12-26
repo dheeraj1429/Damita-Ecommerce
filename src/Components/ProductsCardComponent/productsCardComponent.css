@@ -128,7 +128,7 @@
   transition: all 0.3s ease;
 }
 
-.showNOtifictionBar {
+.showNotification_div {
   right: 20px;
   transition: all 0.3s ease;
 }
