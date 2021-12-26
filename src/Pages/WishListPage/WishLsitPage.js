@@ -4,7 +4,7 @@ import WishListTableCardComponent from '../../Components/WissListTableCardCompon
 import CustomButtonComponent from '../../Components/CustomButtonComponent/CustomButtonComponent';
 import ProductsSummerTabComponent from '../../Components/ProductsSummerTabComponent/ProductsSummerTabComponent';
 
-import { removeAllProducts } from '../../Redux/Action/action';
+import { removeAllProducts, removeWhislistProducts } from '../../Redux/Action/action';
 import { useSelector, useDispatch } from 'react-redux';
 
 import './WishListPage.css';
@@ -27,7 +27,9 @@ function WishLsitPage() {
             <th>Qty</th>
             <th>Subtotal</th>
           </tr>
-          {selector !== null ? selector.map(({ id, ...otherData }) => <WishListTableCardComponent {...otherData} key={id} />) : null}
+          {selector !== null
+            ? selector.map(({ id, ...otherData }) => <WishListTableCardComponent {...otherData} key={id} removeItemfrom={removeWhislistProducts} />)
+            : null}
         </table>
       </div>
 
@@ -37,7 +39,7 @@ function WishLsitPage() {
       </div>
 
       <div className="Products_Summer_Div">
-        <ProductsSummerTabComponent />
+        <ProductsSummerTabComponent data={selector} />
       </div>
     </div>
   );

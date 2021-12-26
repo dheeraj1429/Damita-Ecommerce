@@ -7,7 +7,7 @@ import { showSideBar } from '../../Redux/Action/action';
 
 import './CustomButtonComponent.css';
 
-function CustomButtonComponent({ type, InnerData, ButtonClassName, onClick }) {
+function CustomButtonComponent({ type, InnerData, ButtonClassName, onClick, ButtonInnerData }) {
   const location = useLocation();
   const dispatch = useDispatch();
 

@@ -29,3 +29,17 @@
   margin-right: 1rem;
   color: var(--ProductsHeadingColor);
 }
+
+.style_2 {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.style_2 .Products_Summer_Inner_Div {
+  display: block;
+}
+
+.style_2 button {
+  width: 100%;
+}

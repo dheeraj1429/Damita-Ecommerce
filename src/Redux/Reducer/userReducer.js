@@ -35,6 +35,13 @@ const userReducer = function (state = initalState, action) {
         AddToCardProducts: combineSelectedProducts(state.AddToCardProducts, action.payload),
       };
 
+    case ACTION_TYPE.REMOVE_CARD_ITEM:
+      const dataRemove = state.AddToCardProducts.filter((el) => el.shortTitle !== action.payload);
+      return {
+        ...state,
+        AddToCardProducts: dataRemove,
+      };
+
     case ACTION_TYPE.CLOSE_MODEL_WINDOW:
       return {
         ...state,

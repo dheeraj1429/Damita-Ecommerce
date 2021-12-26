@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './SearchBarComponent.css';
 
-function SearchBarComponent() {
+function SearchBarComponent({ icon }) {
   const [SearchState, setSearchState] = useState('');
 
   const ChangeSearchInputValue = function (e) {
@@ -16,9 +16,7 @@ function SearchBarComponent() {
       </div>
 
       <input type="search" placeholder="I'm searching for.." value={SearchState} onChange={ChangeSearchInputValue} />
-      <div className="Search__Icon_Div">
-        <i class="fas fa-search"></i>
-      </div>
+      <div className="Search__Icon_Div">{icon ? <i className={icon} /> : null}</div>
     </div>
   );
 }

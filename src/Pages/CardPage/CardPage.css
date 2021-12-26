@@ -1,0 +1,33 @@
+.Card_Heading {
+  text-align: center;
+}
+
+.Card_Heading h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--TabSecondColor);
+  margin-bottom: 1rem;
+}
+
+.Wishlist_Products_card {
+  display: flex;
+  justify-content: center;
+}
+.Table_Div {
+  width: 80%;
+}
+
+.TotalPrice_Div {
+  position: sticky;
+  top: 0;
+  width: 40%;
+  height: auto;
+  border: 1px solid var(--SmoothBg);
+  margin-left: 2rem;
+}
+
+.TotalPrice_Div h1 {
+  color: var(--Gray);
+  font-size: 1.6rem;
+  font-weight: 500;
+}

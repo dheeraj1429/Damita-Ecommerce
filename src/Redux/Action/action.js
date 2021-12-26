@@ -87,3 +87,10 @@ export const removeAllProducts = function () {
     type: ACTION_TYPE.REMOVE_ALL_PRODUCTS,
   };
 };
+
+export const removCardItem = function (data) {
+  return {
+    type: ACTION_TYPE.REMOVE_CARD_ITEM,
+    payload: data,
+  };
+};

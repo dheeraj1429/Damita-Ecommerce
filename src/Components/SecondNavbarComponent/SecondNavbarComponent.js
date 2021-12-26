@@ -29,7 +29,7 @@ function SecondNavbarComponent() {
         ))}
       </div>
       {/* Search Component */}
-      <SearchBarComponent />
+      <SearchBarComponent icon={'fas fa-search'} />
 
       {/* Mega Menu Component */}
       {/* <MegaMenuComponent Data={ShowMegaMenu} /> */}
