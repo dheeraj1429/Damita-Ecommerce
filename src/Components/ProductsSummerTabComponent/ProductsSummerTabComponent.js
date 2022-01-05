@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import CustomButtonComponent from '../CustomButtonComponent/CustomButtonComponent';
 
 import './ProductsSummerTabComponent.css';

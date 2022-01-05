@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 import CustomButtonComponent from '../../Components/CustomButtonComponent/CustomButtonComponent';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { addTocardProducts } from '../../Redux/Action/action';
 import ProductsImageComponent from '../../Components/ProductImageComponent/ProductsImageComponent';
 
 import './ProductsSinglePage.css';
@@ -10,6 +11,7 @@ import './ProductsSinglePage.css';
 function ProductsSinglePage() {
   const [ProductQty, setProductQty] = useState(1);
   const selector = useSelector((state) => state.userStoreData.SelectedProduct);
+  const dispatch = useDispatch();
 
   const IncProductQty = function () {
     setProductQty(ProductQty + 1);
@@ -42,7 +44,12 @@ function ProductsSinglePage() {
                       -
                     </div>
                   </div>
-                  <CustomButtonComponent type={'button'} InnerData={'ADD TO CART'} ButtonClassName={'Add_to_cart'} />
+                  <CustomButtonComponent
+                    type={'button'}
+                    InnerData={'ADD TO CART'}
+                    ButtonClassName={'Add_to_cart'}
+                    onClick={() => dispatch(addTocardProducts(selector[0]))}
+                  />
                 </div>
               </div>
             </div>

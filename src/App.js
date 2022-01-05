@@ -15,6 +15,7 @@ import ProductsSideBarComponent from './Components/ProductsSideBarComponent/Prod
 import FooterComponent from './Components/FooterComponent/FooterComponent';
 import WishLsitPage from './Pages/WishListPage/WishLsitPage';
 import CardPage from './Pages/CardPage/CardPage';
+import CheckOutPage from './Pages/CheckOutPage/CheckOutPage';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route exact path="/Ecommerce/Products:Name" element={<ProductsSinglePage />} />
         <Route exact path="/Wishlist/Products" element={<WishLsitPage />} />
         <Route exact path="/Card" element={<CardPage />} />
+        <Route exact path="/CheckOut" element={<CheckOutPage />} />
       </Routes>
 
       {/* Footer */}

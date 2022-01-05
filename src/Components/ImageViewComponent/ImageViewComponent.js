@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { showProductPrev } from '../../Redux/Action/action';
+import { showProductPrev, addTocardProducts } from '../../Redux/Action/action';
+
 import CustomButtonComponent from '../CustomButtonComponent/CustomButtonComponent';
 import './ImageViewComponent.css';
 

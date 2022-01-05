@@ -32,6 +32,10 @@ function CustomButtonComponent({ type, InnerData, ButtonClassName, onClick, Butt
             ? InnerData == 'ADD TO CART'
               ? '/card'
               : ChangeUrlLoactionFunction(InnerData)
+              ? InnerData == 'GO TO CHECKOUT' || InnerData == 'PROCEED TO CHECKOUT'
+                ? '/CheckOut'
+                : ChangeUrlLoactionFunction(InnerData)
+              : null
             : null
           : null
       }
